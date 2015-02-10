@@ -1,3 +1,15 @@
 <h2>Uploads</h2>
 
+<div class="card table-card">
+  {{#each upload in model}}
+    <div data-id="{{ upload.id }}">
+      {{upload.filename}}
+    </div>
+  {{/each}}
+</div>
+
+<div class="button-bar">
+  <button>New Upload</button>
+</div>
+
 {{outlet}}
