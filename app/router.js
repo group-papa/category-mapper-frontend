@@ -6,7 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route("uploads");
+  this.route("uploads", function() {
+    this.route("new");
+  });
+  this.route("taxonomies");
 });
 
 export default Router;
