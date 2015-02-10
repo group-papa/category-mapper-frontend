@@ -4,7 +4,20 @@ module.exports = function(app) {
 
   taxonomiesRouter.get('/', function(req, res) {
     res.send({
-      'taxonomies': []
+      'taxonomies': [
+        {
+          "id":"7ed8d143-e113-40f9-ad9b-a80972873356",
+          "name":"Amazon1",
+          "dateCreated":"2015-02-10T20:23:09Z"
+        },{
+          "id":"750763b9-cf2a-42ad-82d0-c725c0a41f24",
+          "name":"Amazon2",
+          "dateCreated":"2015-02-10T19:56:07Z"
+        },{
+          "id":"d9bda465-ffbb-4fa8-ad03-758e554443e9",
+          "name":"Amazon3",
+          "dateCreated":"2015-02-10T20:23:04Z"
+        }]
     });
   });
 
