@@ -1,4 +1,4 @@
-# Category Mapper Frontend
+# Category Mapper Frontend [![Build Status](https://travis-ci.org/group-papa/category-mapper-frontend.svg)](https://travis-ci.org/group-papa/category-mapper-frontend)
 
 This README outlines the details of collaborating on this Ember application.
 
