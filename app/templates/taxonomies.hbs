@@ -9,7 +9,9 @@
 </div>
 
 <div class="button-bar">
-  <button>New Taxonomy</button>
+  <input type='text' id='taxonomy_name' />
+  <input type='file' id='taxonomy_file'/>
+  <button {{action 'upload'}} >Upload Taxonomy</button>
 </div>
 
 {{outlet}}
