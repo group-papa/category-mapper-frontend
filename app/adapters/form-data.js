@@ -15,8 +15,6 @@ export default ApplicationAdapter.extend({
       var formData = new FormData();
       var root = Ember.keys(data)[0];
 
-      console.log(data);
-
       Ember.keys(data[root]).forEach(function(key) {
         if (data[root][key]) {
           formData.append(root + "[" + key + "]", data[root][key]);
