@@ -2,8 +2,8 @@
 
 <div class="card table-card">
   {{#each taxonomy in model}}
-    <div data-id="{{ taxonomy.id }}">
-      blah
+    <div data-id="">
+      {{taxonomy.name}}
     </div>
   {{/each}}
 </div>
@@ -11,8 +11,5 @@
 <div class="button-bar">
   <button>New Taxonomy</button>
 </div>
-
-{{outlet}}
-
 
 {{outlet}}
