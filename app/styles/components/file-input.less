@@ -1,0 +1,30 @@
+@import (reference) 'buttons';
+
+.file-input {
+  color: transparent;
+  width: 10em;
+
+  &::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+  &::before {
+    content: 'Upload File';
+    display: inline-block;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    width: 7em;
+    .button;
+    .primary-button;
+  }
+
+  &:hover::before {
+    .primary-button-hover;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
