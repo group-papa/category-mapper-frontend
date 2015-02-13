@@ -1,17 +1,20 @@
 <h2>Taxonomies</h2>
 
-<div class="card table-card">
-  {{#each taxonomy in model}}
-    <div data-id="">
-      {{taxonomy.name}}
+<div class="container with-sidebar">
+  <div class="card-table float-left">
+    <div class="cards">
+      {{#each taxonomy in model}}
+        <div class="card" data-id="">
+          {{taxonomy.name}}
+        </div>
+      {{/each}}
     </div>
-  {{/each}}
-</div>
-
-<div class="button-bar">
-  <input type='text' id='taxonomy_name' />
-  <input type='file' id='taxonomy_file'/>
-  <button {{action 'upload'}} >Upload Taxonomy</button>
+    <div class="actions align-center">
+      {{file-input action="upload"}}
+    </div>
+  </div>
+  <div class="sidebar float-right">
+  </div>
 </div>
 
 {{outlet}}
