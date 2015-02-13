@@ -1,17 +1,5 @@
 import Ember from 'ember';
+import FileUploadMixin from '../mixins/file-upload';
 
-export default Ember.Controller.extend({
-  actions: {
-    upload: function() {
-      var store = this.store;
-      var file = document.getElementById('taxonomy_file').files[0];
-      var tmp = store.createRecord('taxonomy', {
-        name: document.getElementById('taxonomy_name').value,
-      });
-
-      tmp.set('attachment', file);
-      console.log(tmp);
-      tmp.save();
-    }
-  }
+export default Ember.Controller.extend(FileUploadMixin, {
 });
