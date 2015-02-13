@@ -1,5 +1,35 @@
-@background-color: #F3F4F8;
+@background-color: #F8F5F3;
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   background: @background-color;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+
+  &.with-sidebar {
+    max-width: 70em;
+    padding-right: 22em;
+  }
+}
+
+.actions {
+  padding: 0.3em;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.align-center {
+  text-align: center;
 }
