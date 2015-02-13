@@ -10,12 +10,13 @@ export default Ember.Component.extend({
   fileTypes: [],
 
   bindHandlers: function() {
-    console.log(this.$().on('change', this.handleFile.bind(this)));
+    this.$().on('change', this.handleFile.bind(this));
   }.on('didInsertElement'),
 
   handleFile: function() {
     var elem = this.$()[0];
     this.sendAction('action', elem.files);
+    elem.value = "";
   }
 
 });
