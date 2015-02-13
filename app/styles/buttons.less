@@ -1,0 +1,30 @@
+@primary-button: #A6C776;
+@primary-button-text: #F8F5F0;
+@primary-button-hover: #83A552;
+
+.button {
+  transition: all 250ms linear;
+  border-radius: 0.3em;
+  text-transform: uppercase;
+  border: none;
+  padding: 1em 1.25em;
+  line-height: 1;
+  font-weight: 600;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.primary-button {
+  background-color: @primary-button;
+  color: @primary-button-text;
+
+  &:hover {
+    .primary-button-hover;
+  }
+}
+
+.primary-button-hover {
+  background-color: @primary-button-hover;
+}
