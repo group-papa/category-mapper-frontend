@@ -1,0 +1,8 @@
+<div {{bind-attr class=":card item.isDirty item.isNew"}} data-id="">
+  <div>
+    {{yield}}
+  </div>
+  <div class="actions">
+    <button class="card-button danger" {{action "delete" item}}>×</button>
+  </div>
+</div>

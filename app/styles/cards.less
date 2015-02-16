@@ -1,5 +1,9 @@
 .card-table {
   width: 100%;
+
+  >.actions {
+    padding: 0.3em;
+  }
 }
 
 .card {
@@ -7,4 +11,65 @@
   margin-bottom: 0.3em;
   padding: 0.7em;
   box-shadow: rgba(0,0,0,0.1) 0 1px 2px;
+  position: relative;
+  border-radius: 1px;
+
+  &.is-dirty {
+    opacity: 0.8;
+
+    &::after {
+      margin-right: 0.5em;
+      margin-top: -0.5em;
+      top: 50%;
+      right: 100%;
+      content: ' ';
+      height: 1em;
+      width: 1em;
+      position: absolute;
+      border-radius: 50%;
+      border:dashed 0.1em rgba(0,0,0,0.7);
+      -webkit-animation: loader-spin 1.5s infinite linear;
+         -moz-animation: loader-spin 1.5s infinite linear;
+              animation: loader-spin 1.5s infinite linear;
+    }
+  }
+
+  .actions{
+    display: none;
+  }
+
+   &:hover {
+     padding-right: 7em;
+
+     .actions {
+       display: block;
+       position: absolute;
+       right: 0em;
+       top: 0em;
+       bottom: 0em;
+       max-width: 7em;
+       background: yellow;
+     }
+   }
+}
+
+@keyframes loader-spin {
+    from {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes loader-spin {
+    from {  -moz-transform: rotate(0deg); }
+    to   {  -moz-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes loader-spin {
+    from {  -webkit-transform: rotate(0deg); }
+    to   {  -webkit-transform: rotate(360deg); }
 }
