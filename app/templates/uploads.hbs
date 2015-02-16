@@ -1,0 +1,18 @@
+<div class="container with-sidebar">
+  <div class="card-table float-left">
+    <div class="cards">
+      {{#each upload in model}}
+        {{#list-item delete="delete" item=upload}}
+          {{upload.filename}}
+        {{/list-item}}
+      {{/each}}
+    </div>
+    <div class="actions align-center">
+      {{file-input action="upload"}}
+    </div>
+  </div>
+  <div class="sidebar float-right">
+  </div>
+</div>
+
+{{outlet}}
