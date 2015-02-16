@@ -5,7 +5,7 @@ import {
 
 moduleForModel('taxonomy', 'Taxonomy', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:category']
 });
 
 test('it exists', function() {
