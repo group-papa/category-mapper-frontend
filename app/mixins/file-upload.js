@@ -13,9 +13,20 @@ export default Ember.Mixin.create({
       for (var i = 0; i < files.length; i++) {
         var file = files[i];
         var record = store.createRecord(modelName, {
-          name: file.name,
           attachment: file
         });
+
+        var uploadName = this.get('uploadName');
+
+        if (uploadName !== undefined) {
+          if (uploadName === '') {
+            uploadName = file.name;
+          }
+
+          record.set('name', uploadName);
+        }
+
+        this.set('uploadName', '');
 
         record.save();
       }
