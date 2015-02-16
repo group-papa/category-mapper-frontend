@@ -2,8 +2,18 @@
   <div class="card-table float-left">
     <div class="cards">
       {{#each upload in model}}
-        {{#list-item delete="delete" item=upload}}
-          {{upload.filename}}
+        {{#list-item item=upload}}
+          <span style="margin-right: 1em">
+            {{upload.filename}}
+          </span>
+          <small>
+            Mapping Count:
+            {{upload.mappingCount}}
+          </small>
+          <small>
+            Product Count:
+            {{upload.productCount}}
+          </small>
         {{/list-item}}
       {{/each}}
     </div>

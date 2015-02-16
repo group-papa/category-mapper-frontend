@@ -1,11 +1,10 @@
 import Ember from 'ember';
 import FileUploadMixin from '../mixins/file-upload';
+import SelectableMixin from '../mixins/selectable';
 
-export default Ember.Controller.extend(FileUploadMixin, {
-  uploadName: '',
-  actions: {
-    delete: function(item) {
-      item.destroyRecord();
-    }
-  }
+export default Ember.Controller.extend(
+  SelectableMixin,
+  FileUploadMixin,
+  {
+    uploadName: ''
 });

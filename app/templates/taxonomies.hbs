@@ -2,7 +2,7 @@
   <div class="card-table float-left">
     <div class="cards">
       {{#each taxonomy in model}}
-        {{#list-item delete="delete" item=taxonomy}}
+        {{#list-item item=taxonomy}}
           {{taxonomy.name}}
         {{/list-item}}
       {{/each}}
