@@ -28,3 +28,27 @@
 .primary-button-hover {
   background-color: @primary-button-hover;
 }
+
+
+.card-button {
+  height: 100%;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  min-width: 3em;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:last-child {
+    border-radius: 0px 1px 1px 0px;
+  }
+
+
+  &.danger {
+    background-color: #de6339;
+    color: white;
+  }
+}

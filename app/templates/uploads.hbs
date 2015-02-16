@@ -1,9 +1,9 @@
 <div class="container with-sidebar">
   <div class="card-table float-left">
     <div class="cards">
-      {{#each taxonomy in model}}
-        {{#list-item delete="delete" item=taxonomy}}
-          {{taxonomy.name}}
+      {{#each upload in model}}
+        {{#list-item delete="delete" item=upload}}
+          {{upload.filename}}
         {{/list-item}}
       {{/each}}
     </div>

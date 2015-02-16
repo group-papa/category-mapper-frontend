@@ -3,9 +3,9 @@ import {
   test
 } from 'ember-qunit';
 
-moduleForModel('taxonomy', 'Taxonomy', {
+moduleForModel('upload', 'Upload', {
   // Specify the other units that are required for this test.
-  needs: ['model:category']
+  needs: []
 });
 
 test('it exists', function() {

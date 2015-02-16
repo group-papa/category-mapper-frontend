@@ -1,8 +1,10 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  name: DS.attr('string'),
   attachment: DS.attr('file'),
+  name: DS.attr('string'),
+  filename: DS.attr('string'),
   dateCreated: DS.attr('date'),
-  categories: DS.hasMany('category')
+  mappingCount: DS.attr('number'),
+  productCount: DS.attr('number')
 });
