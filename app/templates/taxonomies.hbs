@@ -2,7 +2,7 @@
   <div class="card-table float-left">
     <div class="cards">
       {{#each taxonomy in model}}
-        {{#list-item item=taxonomy}}
+        {{#list-item item=taxonomy dependentRelationship="categories"}}
           {{taxonomy.name}}
         {{/list-item}}
       {{/each}}
