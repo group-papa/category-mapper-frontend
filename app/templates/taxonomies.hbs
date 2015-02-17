@@ -8,7 +8,11 @@
       {{/each}}
     </div>
     <div class="actions align-center">
-      {{input value=uploadName class='large-input'}}
+      {{input
+        value=uploadName
+        class='large-input'
+        placeholder='Taxonomy name'
+      }}
       {{file-input action="upload" text="Upload Taxonomy"}}
     </div>
   </div>
