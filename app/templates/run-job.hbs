@@ -1,0 +1,34 @@
+<div class="card new-job">
+  <label>
+    Select taxonomy:
+    <span class="select-wrapper">
+    {{view "select"
+      content=taxonomies
+      optionValuePath="content.id"
+      optionLabelPath="content.name"
+    }}
+    </span>
+  </label>
+
+  <label>
+    Select Upload:
+    {{view "select"
+      content=uploads
+      optionValuePath="content.id"
+      optionLabelPath="content.filename"
+    }}
+  </label>
+
+  <button class="button primary-button">Start Job</button>
+</div>
+
+<div class="container with-sidebar">
+  <div class="card-table float-left">
+    <div class="cards">
+    </div>
+  </div>
+  <div class="sidebar float-right">
+  </div>
+</div>
+
+{{outlet}}

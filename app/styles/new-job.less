@@ -1,0 +1,48 @@
+.new-job {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2em;
+  text-align: center;
+
+  .select-wrapper{
+    position: relative;
+    &::before {
+      z-index: 999;
+      color: #998F7F;
+      content: "▼";
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      bottom: 0px;
+      width: 2em;
+      font-size: small;
+      opacity: 0.5;
+      width: 3em;
+    }
+  }
+
+  select {
+    color: #998F7F;
+    background: #FCFAF5;
+    border: 1px solid #E3DBCE;
+    padding: 0.55em 0.9em;
+    border-radius: .15em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    min-width: 10em;
+    position: relative;
+    padding-right: 2em;
+
+    &:focus {
+      color: #2a2b24;
+      outline: none;
+      border-color: #a6c776;
+    }
+  }
+
+  label {
+    margin-right: 2em;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <nav>
+      {{#each link in staticLinks}}
+        {{link-to link.title link.route}}
+      {{/each}}
+      {{#each job in content}}
+        {{link-to job.id taxonomies}}
+      {{/each}}
+    </nav>
+  </div>
+</div>

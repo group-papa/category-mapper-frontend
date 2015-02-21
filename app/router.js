@@ -8,6 +8,8 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route("uploads");
   this.route("taxonomies");
+
+  this.route("run-job");
 });
 
 export default Router;
