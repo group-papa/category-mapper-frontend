@@ -1,3 +1,4 @@
+{{#if item}}
 <div {{bind-attr class=":card :list-item item.isDirty item.isSelected"}} data-id="">
   <div>
     {{yield}}
@@ -6,3 +7,10 @@
     <button class="card-button danger" {{action "delete" item}}>×</button>
   </div>
 </div>
+{{else}}
+<div class="card" data-id="">
+  <div>
+    {{yield}}
+  </div>
+</div>
+{{/if}}
