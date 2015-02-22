@@ -1,0 +1,51 @@
+<div class="card new-job">
+  <label>
+    Select taxonomy:
+    <span class="select-wrapper">
+    {{view "select"
+      content=model.taxonomies
+      optionValuePath="content.id"
+      optionLabelPath="content.name"
+      value=currentTaxonomy
+    }}
+    </span>
+  </label>
+
+  <label>
+    Select Upload:
+    <span class="select-wrapper">
+    {{view "select"
+      content=model.uploads
+      optionValuePath="content.id"
+      optionLabelPath="content.filename"
+      value=currentUpload
+    }}
+    </span>
+  </label>
+
+  <button
+    class="button primary-button"
+    {{action "train"}}
+  >Train</button>
+  <button
+    class="button primary-button"
+    {{action "classify"}}
+  >Classify</button>
+</div>
+
+<div class="container with-sidebar">
+  <div class="card-table float-left">
+    <div class="cards">
+      {{#each product in pagedContent}}
+        {{#list-item}}
+          {{product.name}}
+        {{/list-item}}
+      {{/each}}
+      {{page-numbers content=pagedContent}}
+    </div>
+  </div>
+  <div class="sidebar float-right">
+  </div>
+</div>
+
+{{outlet}}
