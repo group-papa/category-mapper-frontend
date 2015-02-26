@@ -15,13 +15,17 @@
             {{upload.productCount}}
           </small>
         {{/list-item}}
+      {{else}}
+        No product data has been uploaded yet.
       {{/each}}
     </div>
-    <div class="actions align-center">
+    <div class="actions align-left">
+      <h3>Upload some product data (XML)</h3>
       {{file-input action="upload"}}
     </div>
   </div>
   <div class="sidebar float-right">
+    <h3>Upload information</h3>
   </div>
 </div>
 

@@ -16,7 +16,7 @@ export default Ember.Component.extend({
       var item = this.get('item');
       var dependentRelationship = this.get('dependentRelationship');
 
-      if (dependentRelationship !== null && 
+      if (dependentRelationship !== null &&
           item._relationships[dependentRelationship]
           .manyArray.get('isLoaded')) {
         item.get(dependentRelationship)

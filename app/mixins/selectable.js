@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
-  isSelected: false
+  isSelected: false,
+  isEditing: false
 });

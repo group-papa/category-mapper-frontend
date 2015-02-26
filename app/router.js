@@ -7,8 +7,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route("uploads");
-  this.route("taxonomies");
-
+  this.resource("taxonomies", function() {
+    this.resource("single", {path: '/:taxonomy_id'});
+  });
   this.route("run-job");
 });
 

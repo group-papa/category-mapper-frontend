@@ -35,22 +35,29 @@
   height: 100%;
   border: none;
   outline: none;
-  text-transform: uppercase;
   font-size: 0.8em;
   min-width: 3em;
   cursor: pointer;
+  transition:all 0.4s;
 
   &:hover {
-    opacity: 0.8;
   }
 
   &:last-child {
     border-radius: 0px 1px 1px 0px;
   }
-
-
+  &.edit {
+    background-color: #a6c776;
+    color: white;
+  }
+  &.edit:hover {
+    background-color:#73ad1f;
+  }
   &.danger {
     background-color: #de6339;
     color: white;
+  }
+  &.danger:hover {
+    background-color:#bb3204;
   }
 }
