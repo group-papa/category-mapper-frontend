@@ -1,13 +1,19 @@
 <div class="container with-sidebar">
   <div class="card-table float-left">
+    <h3>Existing taxonomies</h3>
     <div class="cards">
       {{#each taxonomy in model}}
-        {{#list-item item=taxonomy dependentRelationship="categories"}}
-          {{taxonomy.name}}
-        {{/list-item}}
+        {{#link-to 'single' taxonomy}}
+          {{#list-item item=taxonomy dependentRelationship="categories"}}
+            {{taxonomy.name}}
+          {{/list-item}}
+        {{/link-to}}
+      {{else}}
+        No taxonomies have been uploaded yet.
       {{/each}}
     </div>
-    <div class="actions align-center">
+    <h3>Add a new taxonomy</h3>
+    <div class="actions align-left">
       {{input
         value=uploadName
         class='large-input'
@@ -17,7 +23,7 @@
     </div>
   </div>
   <div class="sidebar float-right">
+    <h3>Taxonomy Info</h3>
+    {{outlet}}
   </div>
 </div>
-
-{{outlet}}

@@ -5,6 +5,8 @@ import SelectableMixin from '../mixins/selectable';
 export default Ember.Controller.extend(
   SelectableMixin,
   FileUploadMixin,
+
   {
     uploadName: ''
-});
+  }
+);

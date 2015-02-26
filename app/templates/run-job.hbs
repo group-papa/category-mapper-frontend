@@ -37,14 +37,37 @@
   <div class="card-table float-left">
     <div class="cards">
       {{#each product in pagedContent}}
-        {{#list-item}}
-          {{product.name}}
-        {{/list-item}}
+          <div class="card" data-id="" {{action 'showMeta' product}}>
+            <div>
+              {{product.name}}
+            </div>
+          </div>
       {{/each}}
       {{page-numbers content=pagedContent}}
+      <a target="_blank" {{bind-attr href='downloadAddress'}}>Download XML</a>
     </div>
   </div>
   <div class="sidebar float-right">
+    <h3>Classification Results</h3>
+    {{#if currentProduct}}
+      <p>Name: {{currentProduct.name}}</p>
+      <p>Source Category: {{currentProduct.origin}}</p>
+      {{#each mapping in currentProduct.mappings}}
+        <p><strong>Mapping</strong></p>
+        <p><strong>Destination: </strong>{{mapping.categoryString}}</p>
+        <p><strong>Confidence: </strong>{{mapping.confidence}}</p>
+        <p><strong>Method: </strong>{{mapping.method}}</p>
+      {{/each}}
+    {{else}}
+      <p>Please select a product for classification info</p>
+    {{/if}}
+    <h3>Training Results</h3>
+    {{#if trainCountManual}}
+      <p>Manual: {{trainCountManual}}</p>
+      <p>Classifier: {{trainCountClassifier}}</p>
+    {{else}}
+      <p>Please run a train job to see the results here</p>
+    {{/if}}
   </div>
 </div>
 
