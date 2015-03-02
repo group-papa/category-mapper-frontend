@@ -1,5 +1,7 @@
 import DS from 'ember-data';
 
+// Job Model
+
 var Job = DS.Model.extend({
   taxonomy: DS.belongsTo('taxonomy'),
   upload: DS.belongsTo('upload'),

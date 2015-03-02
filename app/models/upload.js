@@ -1,5 +1,7 @@
 import DS from 'ember-data';
 
+// Uploads model
+
 export default DS.Model.extend({
   attachment: DS.attr('file'),
   filename: DS.attr('string'),

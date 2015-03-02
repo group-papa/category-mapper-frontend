@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+// Component for list-items used on all pages
+
 export default Ember.Component.extend({
   dependentRelationship: null,
   click: function() {

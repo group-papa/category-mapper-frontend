@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+// Navigation controller to map links to routes
+
 export default Ember.Controller.extend({
   staticLinks: Ember.A([
     {

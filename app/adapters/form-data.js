@@ -1,6 +1,8 @@
 import Ember from 'ember';
 import ApplicationAdapter from './application';
 
+// Form data adapter
+
 export default ApplicationAdapter.extend({
   formDataTypes: ['POST', 'PUT', 'PATCH'],
 

@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+// Component to handle file input
+
 export default Ember.Component.extend({
   tagName: 'span',
   classNames: ['file-input'],
