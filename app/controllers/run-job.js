@@ -11,10 +11,12 @@ export default Ember.Controller.extend({
   currentProduct: null,
   queryParams: ["page", "perPage"],
   page: 1,
+  perPage: 40,
   pagedContent: pagedArray(
     'products',
     {
-      pageBinding: "page"
+      pageBinding: "page",
+      perPageBinding: "perPage"
     }
   ),
   products: Ember.A([]),
@@ -48,7 +50,7 @@ export default Ember.Controller.extend({
         data: JSON.stringify({
           'upload[id]' : this.get('currentUpload'),
           'taxonomy[id]' : this.get('currentTaxonomy'),
-          'addToManualMappings' : true,
+          'addToManualMappings' : false,
           'addToTrainingSet': true
         }),
         contentType: 'application/json',
