@@ -22,10 +22,12 @@ export default Ember.Controller.extend({
   haveTrained: false,
   queryParams: ["page", "perPage"],
   page: 1,
+  perPage: 40,
   pagedContent: pagedArray(
     'products',
     {
-      pageBinding: "page"
+      pageBinding: "page",
+      perPageBinding: "perPage"
     }
   ),
   products: Ember.A([]),
@@ -114,7 +116,6 @@ export default Ember.Controller.extend({
         }),
         contentType: 'application/json',
         type: 'POST'
-      }).done(function(data){
       });
     },
     showMeta: function(product) {

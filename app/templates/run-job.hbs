@@ -50,6 +50,9 @@
           <div class="card" data-id="" {{action 'showMeta' product}}>
             <div>
               {{product.name}}
+              <small>
+                {{ product.mappings.[0].categoryString }}
+              </small>
             </div>
           </div>
       {{/each}}
