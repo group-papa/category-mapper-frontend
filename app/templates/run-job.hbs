@@ -23,6 +23,16 @@
     </span>
   </label>
 
+  <label>
+    Manual:
+    {{input type="checkbox" name="addToManualMappings" checked=addToManualMappings}}
+  </label>
+
+  <label>
+    Training:
+    {{input type="checkbox" name="addToTrainingSet" checked=addToTrainingSet}}
+  </label>
+
   <button
     class="button primary-button"
     {{action "train"}}
@@ -52,9 +62,24 @@
     {{#if currentProduct}}
       <p>Name: {{currentProduct.name}}</p>
       <p>Source Category: {{currentProduct.origin}}</p>
+      <button class="btn" {{action 'editMapping' }}>Manually Map</button></p>
+      {{#if editingMapping}}
+        <label> Select Upload:
+          <span class="select-wrapper">
+            {{view "select"
+                      content=categories
+                      optionValuePath="content.id"
+                      optionLabelPath="content.parts"
+                      value=newCategory
+            }}
+          </span>
+        </label>
+        <button class="btn" {{action 'saveMapping' }}>Save</button>
+      {{/if}}
       {{#each mapping in currentProduct.mappings}}
         <p><strong>Mapping</strong></p>
-        <p><strong>Destination: </strong>{{mapping.categoryString}}</p>
+        <p><strong>Destination: </strong>{{mapping.categoryString}}
+
         <p><strong>Confidence: </strong>{{mapping.confidence}}</p>
         <p><strong>Method: </strong>{{mapping.method}}</p>
       {{/each}}
@@ -62,7 +87,7 @@
       <p>Please select a product for classification info</p>
     {{/if}}
     <h3>Training Results</h3>
-    {{#if trainCountManual}}
+    {{#if haveTrained}}
       <p>Manual: {{trainCountManual}}</p>
       <p>Classifier: {{trainCountClassifier}}</p>
     {{else}}

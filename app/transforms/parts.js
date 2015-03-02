@@ -2,6 +2,8 @@ import DS from 'ember-data';
 import Ember from 'ember';
 import jQuery from 'jquery';
 
+// Transform to serialize/deserialize our category parts
+
 export default DS.Transform.extend({
   deserialize: function(serialized) {
     if (Ember.typeOf(serialized) === "array") {
